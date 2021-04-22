@@ -8,8 +8,8 @@ package main
 import (
     "fmt"
     "os"
-    "gnorm.org/gnorm/cli"
-    "gnorm.org/gnorm/environ"
+    "github.com/episub/gnorm/cli"
+    "github.com/episub/gnorm/environ"
 )
 func main() {
     fmt.Println("```plain\ngnorm gen\n")

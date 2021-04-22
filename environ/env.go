@@ -1,4 +1,4 @@
-package environ // import "gnorm.org/gnorm/environ"
+package environ // import "github.com/episub/gnorm/environ"
 
 import (
 	"io"

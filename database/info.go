@@ -1,4 +1,4 @@
-package database // import "gnorm.org/gnorm/database"
+package database // import "github.com/episub/gnorm/database"
 import (
 	"log"
 )

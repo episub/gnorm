@@ -18,8 +18,5 @@ require (
 	github.com/rakyll/statik v0.1.1
 	github.com/spf13/cobra v0.0.0-20170905172051-b78744579491
 	github.com/spf13/pflag v1.0.0
-	gnorm.org/gnorm v1.1.1 // indirect
 	gopkg.in/yaml.v2 v2.0.0-20170812160011-eb3733d160e7
 )
-
-replace gnorm.org/gnorm => ./

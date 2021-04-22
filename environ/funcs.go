@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gnorm.org/gnorm/run/data"
+	"github.com/episub/gnorm/run/data"
 
 	"github.com/codemodus/kace"
 	"github.com/jinzhu/inflection"

@@ -12,8 +12,8 @@ import (
 	"github.com/rakyll/statik/fs"
 	"github.com/spf13/cobra"
 
-	_ "gnorm.org/gnorm/cli/statik"
-	"gnorm.org/gnorm/environ"
+	_ "github.com/episub/gnorm/cli/statik"
+	"github.com/episub/gnorm/environ"
 )
 
 func showDocs(env environ.Values, cmd *cobra.Command, args []string) error {

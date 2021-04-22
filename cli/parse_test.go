@@ -5,8 +5,8 @@ import (
 	"log"
 	"testing"
 
-	"gnorm.org/gnorm/environ"
-	"gnorm.org/gnorm/run/data"
+	"github.com/episub/gnorm/environ"
+	"github.com/episub/gnorm/run/data"
 
 	"github.com/BurntSushi/toml"
 	"github.com/google/go-cmp/cmp"

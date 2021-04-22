@@ -1,9 +1,9 @@
-package main // import "gnorm.org/gnorm"
+package main // import "github.com/episub/gnorm"
 
 import (
 	"os"
 
-	"gnorm.org/gnorm/cli"
+	"github.com/episub/gnorm/cli"
 )
 
 // This space used for gocog commands run across the website.

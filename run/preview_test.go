@@ -7,9 +7,9 @@ import (
 	"text/template"
 
 	"github.com/google/go-cmp/cmp"
-	"gnorm.org/gnorm/database"
-	"gnorm.org/gnorm/environ"
-	"gnorm.org/gnorm/run/data"
+	"github.com/episub/gnorm/database"
+	"github.com/episub/gnorm/environ"
+	"github.com/episub/gnorm/run/data"
 )
 
 func TestMakeTable(t *testing.T) {
