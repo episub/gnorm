@@ -511,7 +511,7 @@ func queryColumnComments(log *log.Logger, db *sql.DB, schemaNames []string) ([]c
 					FROM pg_catalog.pg_class c
           JOIN pg_namespace n ON n.oid = c.relnamespace
 					WHERE c.relname = cols.table_name
-          AND n.nspname IN (%s)
+          AND n.nspname = cols.table_schema
 			) AS column_comment
 	FROM information_schema.columns cols
 	WHERE cols.table_schema IN (%s)`
@@ -523,8 +523,7 @@ func queryColumnComments(log *log.Logger, db *sql.DB, schemaNames []string) ([]c
 		vals[i] = schemaNames[i]
 	}
 
-	spotsStr := strings.Join(spots, ", ")
-	query := fmt.Sprintf(q, spotsStr, spotsStr)
+	query := fmt.Sprintf(q, strings.Join(spots, ", "))
 	rows, err := db.Query(query, vals...)
 	if err != nil {
 		return nil, errors.WithMessage(err, "error querying column comments")
@@ -564,7 +563,7 @@ func queryTableComments(log *log.Logger, db *sql.DB, schemaNames []string) ([]ta
 					FROM pg_class c
           JOIN pg_namespace n ON n.oid = c.relnamespace
 					WHERE c.relname = tabs.table_name
-          AND n.nspname IN (%s)
+          AND n.nspname = tabs.table_schema
 			) AS column_comment
 	FROM information_schema.tables tabs
 	WHERE tabs.table_schema IN (%s)`
@@ -576,8 +575,7 @@ func queryTableComments(log *log.Logger, db *sql.DB, schemaNames []string) ([]ta
 		vals[i] = schemaNames[i]
 	}
 
-	spotsStr := strings.Join(spots, ", ")
-	query := fmt.Sprintf(q, spotsStr, spotsStr)
+	query := fmt.Sprintf(q, strings.Join(spots, ", "))
 	rows, err := db.Query(query, vals...)
 	if err != nil {
 		return nil, errors.WithMessage(err, "error querying table comments")
