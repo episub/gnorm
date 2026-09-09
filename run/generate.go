@@ -241,7 +241,7 @@ func doPostRun(env environ.Values, file string, postrun []string) error {
 		run[x] = os.Expand(s, conv)
 	}
 	var cmd *exec.Cmd
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Minute*2)
 	defer cancel()
 	if len(run) > 1 {
 		cmd = exec.CommandContext(ctx, run[0], run[1:]...)
